@@ -54,5 +54,12 @@ namespace UserRegistrationUsingTestCase.Tests
             string actual = validation.ValidatePassword1("Virajjad");
             Assert.AreEqual(actual, "Virajjad");
         }
+        [TestMethod()]
+        public void GivenInputIsString_WhenTestPassword_ShouldReturnPassword3()
+        {
+            Validation validation = new Validation();
+            string actual = validation.ValidatePassword2("Virajjad1");
+            Assert.AreEqual(actual, "Virajjad1");
+        }
     }
 }

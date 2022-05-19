@@ -26,3 +26,7 @@ Console.WriteLine(result4);
 Validation valid5 = new Validation();
 string result5 = valid5.ValidatePassword1("Virajjad");
 Console.WriteLine(result5);
+
+Validation valid6 = new Validation();
+string result6 = valid6.ValidatePassword2("Virajjad1");
+Console.WriteLine(result6);

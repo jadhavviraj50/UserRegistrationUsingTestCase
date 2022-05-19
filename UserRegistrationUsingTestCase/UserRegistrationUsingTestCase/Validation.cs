@@ -14,6 +14,7 @@ namespace UserRegistrationUsingTestCase
         public static string MOBILENUMBER_REGEX = "^[+]{1}[1-9]{2}[-. ]{1}[1-9]{2}[0-9]{8}$";
         public static string PASSWORD_REGEX = "^[a-zA-z]{8,}$";
         public static string PASSWORD_REGEX1 = "^[A-Z]{1}[a-z]{7,}$";
+        public static string PASSWORD_REGEX2 = "^(?=.*[0-9A-Z])[0-9a-zA-z]{8,}$";
 
         public string ValidateFirstName(string firstname)
         {
@@ -78,6 +79,18 @@ namespace UserRegistrationUsingTestCase
         public string ValidatePassword1(string password)
         {
             if (Regex.IsMatch(password, PASSWORD_REGEX1))
+            {
+                Console.WriteLine("Password Matches");
+            }
+            else
+            {
+                Console.WriteLine("Verify Password Again");
+            }
+            return password;
+        }
+        public string ValidatePassword2(string password)
+        {
+            if (Regex.IsMatch(password, PASSWORD_REGEX2))
             {
                 Console.WriteLine("Password Matches");
             }
