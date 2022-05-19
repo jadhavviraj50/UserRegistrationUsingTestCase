@@ -10,6 +10,8 @@ namespace UserRegistrationUsingTestCase
     public class Validation
     {
         public const string NAME_REGEX = "^[A-Z]{1}[a-zA-Z]{2,}$";
+        public static string EMAIL_REGEX = "^[a-z]+(.[a-z])+@[A-Za-z]+.[a-z]{2,3}(.[a-z]{2})?$";
+
         public string ValidateFirstName(string firstname)
         {
             if (Regex.IsMatch(firstname, NAME_REGEX))
@@ -33,6 +35,18 @@ namespace UserRegistrationUsingTestCase
                 Console.WriteLine("Verify Last Name Again");
             }
             return lastname;
+        }
+        public string ValidateEmail(string email)
+        {
+            if (Regex.IsMatch(email, EMAIL_REGEX))
+            {
+                Console.WriteLine("Email Matches");
+            }
+            else
+            {
+                Console.WriteLine("Verify Email Again");
+            }
+            return email;
         }
     }
 }

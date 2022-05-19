@@ -10,3 +10,7 @@ Console.WriteLine(result);
 Validation valid1 = new Validation();
 string result1 = valid1.ValidateLastName("Jadhav");
 Console.WriteLine(result1);
+
+Validation valid2 = new Validation();
+string result2 = valid2.ValidateEmail("viraj.jad@BL.co.in");
+Console.WriteLine(result2);

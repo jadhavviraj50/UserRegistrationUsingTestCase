@@ -26,5 +26,12 @@ namespace UserRegistrationUsingTestCase.Tests
             string actual = validation.ValidateLastName("Jadhav");
             Assert.AreEqual(actual, "Jadhav");
         }
+        [TestMethod()]
+        public void GivenInputIsString_WhenTestEmail_ShouldReturnEmail()
+        {
+            Validation validation = new Validation();
+            string actual = validation.ValidateEmail("viraj.jad@BL.co.in");
+            Assert.AreEqual(actual, "viraj.jad@BL.co.in");
+        }
     }
 }
