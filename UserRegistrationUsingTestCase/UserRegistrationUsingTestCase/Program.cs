@@ -20,5 +20,9 @@ string result3 = valid3.ValidateMobileNumber("+91 9195273264");
 Console.WriteLine(result3);
 
 Validation valid4 = new Validation();
-string result4 = valid4.ValidatePassword("VirajJad");
+string result4 = valid4.ValidatePassword("virajjad");
 Console.WriteLine(result4);
+
+Validation valid5 = new Validation();
+string result5 = valid5.ValidatePassword1("Virajjad");
+Console.WriteLine(result5);
