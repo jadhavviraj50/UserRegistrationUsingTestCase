@@ -34,3 +34,7 @@ Console.WriteLine(result6);
 Validation valid7 = new Validation();
 string result7 = valid7.ValidatePassword3("Virajjad1$");
 Console.WriteLine(result7);
+
+Validation valid8 = new Validation();
+string result8 = valid8.EmailSample("jadhavviraj0@gmail.com");
+Console.WriteLine(result8);

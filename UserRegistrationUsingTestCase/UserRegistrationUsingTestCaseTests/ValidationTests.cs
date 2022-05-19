@@ -68,5 +68,12 @@ namespace UserRegistrationUsingTestCase.Tests
             string actual = validation.ValidatePassword3("Virajjad1$");
             Assert.AreEqual(actual, "Virajjad1$");
         }
+        [TestMethod()]
+        public void GivenInputIsString_WhenTestEmail_ShouldReturnEmail1()
+        {
+            Validation validation = new Validation();
+            string actual = validation.EmailSample("jadhavviraj50@gmail.com");
+            Assert.AreEqual(actual, "jadhavviraj50@gmail.com");
+        }
     }
 }

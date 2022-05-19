@@ -16,6 +16,7 @@ namespace UserRegistrationUsingTestCase
         public static string PASSWORD_REGEX1 = "^[A-Z]{1}[a-z]{7,}$";
         public static string PASSWORD_REGEX2 = "^(?=.*[0-9A-Z])[0-9a-zA-z]{8,}$";
         public static string PASSWORD_REGEX3 = "^(?=.*[@#$%0-9A-Z])[@#$%0-9a-zA-Z]{8,}$";
+        public static string EMAIL_REGEX1 = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
 
         public string ValidateFirstName(string firstname)
         {
@@ -112,6 +113,18 @@ namespace UserRegistrationUsingTestCase
                 Console.WriteLine("Verify Password Again");
             }
             return password;
+        }
+        public string EmailSample(string email)
+        {
+            if (Regex.IsMatch(email, EMAIL_REGEX1))
+            {
+                Console.WriteLine("Email Matches");
+            }
+            else
+            {
+                Console.WriteLine("Verify Email Again");
+            }
+            return email;
         }
     }
 }
