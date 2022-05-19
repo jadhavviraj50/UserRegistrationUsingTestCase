@@ -30,3 +30,7 @@ Console.WriteLine(result5);
 Validation valid6 = new Validation();
 string result6 = valid6.ValidatePassword2("Virajjad1");
 Console.WriteLine(result6);
+
+Validation valid7 = new Validation();
+string result7 = valid7.ValidatePassword3("Virajjad1$");
+Console.WriteLine(result7);
