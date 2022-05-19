@@ -33,5 +33,12 @@ namespace UserRegistrationUsingTestCase.Tests
             string actual = validation.ValidateEmail("viraj.jad@BL.co.in");
             Assert.AreEqual(actual, "viraj.jad@BL.co.in");
         }
+        [TestMethod()]
+        public void GivenInputIsString_WhenTestMobileNumber_ShouldReturnMobileNumber()
+        {
+            Validation validation = new Validation();
+            string actual = validation.ValidateMobileNumber("+91 9195273264");
+            Assert.AreEqual(actual, "+91 9195273264");
+        }
     }
 }
