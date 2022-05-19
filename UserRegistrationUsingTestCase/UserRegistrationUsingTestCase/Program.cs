@@ -18,3 +18,7 @@ Console.WriteLine(result2);
 Validation valid3 = new Validation();
 string result3 = valid3.ValidateMobileNumber("+91 9195273264");
 Console.WriteLine(result3);
+
+Validation valid4 = new Validation();
+string result4 = valid4.ValidatePassword("VirajJad");
+Console.WriteLine(result4);

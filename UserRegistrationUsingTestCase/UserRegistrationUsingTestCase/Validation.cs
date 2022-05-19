@@ -12,6 +12,7 @@ namespace UserRegistrationUsingTestCase
         public const string NAME_REGEX = "^[A-Z]{1}[a-zA-Z]{2,}$";
         public static string EMAIL_REGEX = "^[a-z]+(.[a-z])+@[A-Za-z]+.[a-z]{2,3}(.[a-z]{2})?$";
         public static string MOBILENUMBER_REGEX = "^[+]{1}[1-9]{2}[-. ]{1}[1-9]{2}[0-9]{8}$";
+        public static string PASSWORD_REGEX = "^[a-zA-z]{8,}$";
 
         public string ValidateFirstName(string firstname)
         {
@@ -60,6 +61,18 @@ namespace UserRegistrationUsingTestCase
                 Console.WriteLine("Verify Mobile Number Again.");
             }
             return mobilenumber;
+        }
+        public string ValidatePassword(string password)
+        {
+            if (Regex.IsMatch(password, PASSWORD_REGEX))
+            {
+                Console.WriteLine("Password Matches");
+            }
+            else
+            {
+                Console.WriteLine("Verify Password Again");
+            }
+            return password;
         }
     }
 }

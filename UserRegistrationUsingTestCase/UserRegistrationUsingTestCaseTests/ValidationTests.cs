@@ -40,5 +40,12 @@ namespace UserRegistrationUsingTestCase.Tests
             string actual = validation.ValidateMobileNumber("+91 9195273264");
             Assert.AreEqual(actual, "+91 9195273264");
         }
+        [TestMethod()]
+        public void GivenInputIsString_WhenTestPassword_ShouldReturnPassword()
+        {
+            Validation validation = new Validation();
+            string actual = validation.ValidatePassword("VirajJad");
+            Assert.AreEqual(actual, "VirajJad");
+        }
     }
 }
