@@ -18,5 +18,13 @@ namespace UserRegistrationUsingTestCase.Tests
             string expected = validation.ValidateFirstName("Viraj");
             Assert.AreEqual(expected, "Viraj");
         }
+
+        [TestMethod()]
+        public void GivenInputIsString_WhenTestLastName_ShouldReturnLastName()
+        {
+            Validation validation = new Validation();
+            string actual = validation.ValidateLastName("Jadhav");
+            Assert.AreEqual(actual, "Jadhav");
+        }
     }
 }

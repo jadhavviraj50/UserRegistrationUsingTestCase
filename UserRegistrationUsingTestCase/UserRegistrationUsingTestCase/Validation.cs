@@ -9,10 +9,10 @@ namespace UserRegistrationUsingTestCase
 {
     public class Validation
     {
-        public const string FIRSTNAME_REGEX = "^[A-Z]{1}[a-zA-Z]{2,}$";
+        public const string NAME_REGEX = "^[A-Z]{1}[a-zA-Z]{2,}$";
         public string ValidateFirstName(string firstname)
         {
-            if (Regex.IsMatch(firstname, FIRSTNAME_REGEX))
+            if (Regex.IsMatch(firstname, NAME_REGEX))
             {
                 Console.WriteLine("First Name Matches");
             }
@@ -21,6 +21,18 @@ namespace UserRegistrationUsingTestCase
                 Console.WriteLine("Verify First Name Again");
             }
             return firstname;
+        }
+        public string ValidateLastName(string lastname)
+        {
+            if (Regex.IsMatch(lastname, NAME_REGEX))
+            {
+                Console.WriteLine("Last Name Matches");
+            }
+            else
+            {
+                Console.WriteLine("Verify Last Name Again");
+            }
+            return lastname;
         }
     }
 }
