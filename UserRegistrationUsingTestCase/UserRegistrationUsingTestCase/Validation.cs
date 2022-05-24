@@ -126,5 +126,18 @@ namespace UserRegistrationUsingTestCase
             }
             return email;
         }
+
+        public string ValidateEmailParametrized(string email)
+        {
+            if (Regex.IsMatch(email, EMAIL_REGEX1))
+            {
+                Console.WriteLine("Email Matches");
+            }
+            else
+            {
+                Console.WriteLine("Verify Email Again");
+            }
+            return email;
+        }
     }
 }
