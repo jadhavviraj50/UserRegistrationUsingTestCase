@@ -91,6 +91,10 @@ namespace UserRegistrationUsingTestCase
 
         */
 
+
+        //UC12- Refactor the code to throw custom exception in case of invalid user details
+        //UC13- Refactor the code to use lambda function to validate user entry
+
         [Test]
         public void GivenInputIsString_WhenTestFirstName_ShouldReturnFirstName()
         {
@@ -152,36 +156,19 @@ namespace UserRegistrationUsingTestCase
                 Assert.AreEqual(ex.Message, "Mobile Number Is Invalid");
             }
         }
+
         [Test]
         public void GivenInputIsString_WhenTestPassword_ShouldReturnPassword()
         {
             try
             {
                 Validation validation = new Validation("INVALID_PASSWORD");
-                bool password = validation.ValidatePassword("VirajJa2@");
+                bool password = validation.ValidatePassword("VirajJa2");
             }
             catch (ExceptionUserRegistration ex)
             {
                 Assert.AreEqual(ex.Message, "Password Is Invalid");
             }
-        }
-        [Test]
-        [TestCase("Hello@welcome.com")]
-        [TestCase("Hello+plus@welcome.com")]
-        [TestCase("VirajJadhav@gmail.com.in")]
-        [TestCase("Hello+123@welcome.com")]
-        public void GivenInputIsString_WhenTestEmail_ShouldReturnEmailParamerizedTest(string mailAddress)
-        {
-            try
-            {
-                Validation validation = new Validation("INVALID_EMAIL");
-                bool password = validation.ValidatePassword("mailAddress");
-            }
-            catch (ExceptionUserRegistration ex)
-            {
-                Assert.AreEqual(ex.Message, "Email Is Invalid");
-            }
-
         }
 
     }
