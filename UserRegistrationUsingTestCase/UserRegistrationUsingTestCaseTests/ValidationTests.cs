@@ -72,8 +72,8 @@ namespace UserRegistrationUsingTestCase.Tests
         public void GivenInputIsString_WhenTestEmail_ShouldReturnEmail1()
         {
             Validation validation = new Validation();
-            string actual = validation.EmailSample("jadhavviraj50@gmail.com");
-            Assert.AreEqual(actual, "jadhavviraj50@gmail.com");
+            string actual = validation.EmailSample("jadhavviraj0@gmail.com");
+            Assert.AreEqual(actual, "jadhavviraj0@gmail.com");
         }
     }
 }
