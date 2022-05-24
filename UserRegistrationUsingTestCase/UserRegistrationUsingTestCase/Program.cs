@@ -3,6 +3,7 @@ using UserRegistrationUsingTestCase;
 
 Console.WriteLine("Welcome To User Registration Problem Using Test Case");
 
+/*
 Validation valid = new Validation();
 string result = valid.ValidateFirstName("Viraj");
 Console.WriteLine(result);
@@ -42,3 +43,4 @@ Console.WriteLine(result8);
 Validation valid9 = new Validation();
 string result9 = valid8.ValidateEmailParametrized("jadhavviraj0@gmail.com");
 Console.WriteLine(result9);
+*/
